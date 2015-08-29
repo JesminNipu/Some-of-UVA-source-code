@@ -1,30 +1,19 @@
-// UVa Solution 483 - Word Scramble
- #include<stdio.h>
-#include<string.h>
+#include <bits/stdc++.h>
+using namespace std;
 int main()
 {
-int l,i,j,b,k;
-char n[1000];
-while(gets(n))
+	char s[100],ch;
+int a,i,j,k,l;
+while(cin>>s)
 {
-l=strlen(n);
-b=-1;
-for(i=0;i<l;i++)
- {
- if(n[i]==' ')
-
- {
- for(j=i-1;j>b;j--)
- printf("%c",n[j]);
- printf(" ");
- b=i;
- }
-
-}
-
-for(i=l-1;i>b;i--)
- printf("%c",n[i]);
-printf("\n");
+	ch=getchar();
+	
+	for(i=strlen(s)-1;i>=0;i--)
+	{
+		printf("%c",s[i]);
+	}
+	putchar(ch);
+	
 }
 return 0;
 }
