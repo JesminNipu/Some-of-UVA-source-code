@@ -1,35 +1,33 @@
 #include <stdio.h>
-
-int  a[1000];
-
+int a[2000];
 int main()
 {
-    int n,a[1001],count=0,i,j;
-  
-    while(scanf("%d",&n)==1)
-         count=0,j=0;
-        for( i=0; i<n; i++)
-        {
-            scanf("%d",&a[i]);
-            if(a[i]==0) 
-			count++;
-        }
-
-        if(count==n)
-        {
-            printf("0\n");
-        }
-        else{
-
-            for(i=0; i<n; i++)
-                if(a[i]!=0)
-                if(j)
+	int i,t,n,s,count,j;
+	while(scanf("%d",&n)==1 )
+	{
+		s=0,j=0,count=0;
+		if(n==0) break;
+		for(i=0;i<n;i++)
+		{
+			scanf("%d",&a[i]);
+			if(a[i]!=0)
+			{
+				count++;
+				a[j++]=a[i];
+			}
+		}
+		for(i=0;i<j;i++)
+		{
+	if(s)
           printf(" ");
-          j=1;
-          printf("%d",a[i]);
-          printf("\n");  
-        }
-        
-    
-    return 0;
+          s=1;
+          printf("%d",a[i]); 
+			}
+		if(count==0)
+		
+			printf("0");
+		printf("\n");
+	
+	}
+	return 0;
 }

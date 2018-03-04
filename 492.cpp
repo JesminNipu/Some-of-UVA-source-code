@@ -13,10 +13,10 @@ int main()
 	
 	char ch,c;
 	
-	while(ch=getchar())
+while((ch=getchar()) != EOF)	//while(ch=getchar())
 	{
-		if(ch==EOF)
-		return 0;
+		//if(ch==EOF)
+		//return 0;
 		
 		if(isalpha(ch))
 		{
@@ -24,12 +24,13 @@ int main()
 			{
 				while(isalpha(ch))
 				{
-					printf("%c",ch);
+					printf("value=1 %c",ch);
 					ch=getchar();
+					printf("value=2 %c\n",ch);
 				}
-				printf("ay");
+				printf("ay\n");
 			}
-			else
+			/*else
 			{
 				c=ch;
 				ch=getchar();
@@ -40,9 +41,9 @@ int main()
 				}
 				printf("%cay",c);
 				
-			}
+			}*/
 		}
-		printf("%c",ch);
+		//printf("%c",ch);
 	
 	}
 	return 0;
